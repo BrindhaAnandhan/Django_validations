@@ -20,6 +20,9 @@ def Employee(request):
             pf = EFDO.cleaned_data['Portfolio']
             EOO = EmployeeInfo.objects.get_or_create(Name = name, Experience = ex, Mobile = mob, Email = email,Remail=Remail, Portfolio = pf)[0]
             EOO.save()
+            return HttpResponse("School Created")
+        else:
+            return HttpResponse("Invalid")
     return render(request, 'Employee.html', data)
 
 
