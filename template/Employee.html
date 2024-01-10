@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        div
+        {
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 500px;
+            background-color: black;
+        }
+        input
+        {
+            margin-left: -55px;
+        }
+        form
+        {
+            color:aliceblue;
+            padding-top: 40px;
+        }
+    </style> -->
+</head>
+<body>
+    <center>
+        <h1>Employee</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                {{ EFO.as_p }}
+    
+                <input type="submit" value="Submit">
+            </form>
+            {{ message }}
+    </center>
+</body>
+</html>
